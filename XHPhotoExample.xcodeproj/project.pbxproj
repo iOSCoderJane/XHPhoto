@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1509F1B42E0937C500027D2B /* XHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1509F1B32E0937C500027D2B /* XHImagePickerController.m */; };
 		4BBAB8AC1D05153E00004963 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAB8AB1D05153E00004963 /* main.m */; };
 		4BBAB8AF1D05153E00004963 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAB8AE1D05153E00004963 /* AppDelegate.m */; };
 		4BBAB8B11D05153E00004963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBAB8B01D05153E00004963 /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1509F1B22E0937C500027D2B /* XHImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHImagePickerController.h; sourceTree = "<group>"; };
+		1509F1B32E0937C500027D2B /* XHImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHImagePickerController.m; sourceTree = "<group>"; };
 		4BBAB8A71D05153E00004963 /* XHPhotoExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHPhotoExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBAB8AB1D05153E00004963 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BBAB8AD1D05153E00004963 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 			children = (
 				4BBAB8C81D05270B00004963 /* UIViewController+XHPhoto.h */,
 				4BBAB8C91D05270B00004963 /* UIViewController+XHPhoto.m */,
+				1509F1B22E0937C500027D2B /* XHImagePickerController.h */,
+				1509F1B32E0937C500027D2B /* XHImagePickerController.m */,
 			);
 			path = XHPhoto;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -173,6 +179,7 @@
 			files = (
 				4BBAB8CA1D05270B00004963 /* UIViewController+XHPhoto.m in Sources */,
 				4BBAB8AF1D05153E00004963 /* AppDelegate.m in Sources */,
+				1509F1B42E0937C500027D2B /* XHImagePickerController.m in Sources */,
 				4BBAB8C31D05160300004963 /* ViewController.m in Sources */,
 				4BBAB8AC1D05153E00004963 /* main.m in Sources */,
 			);

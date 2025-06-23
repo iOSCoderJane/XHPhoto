@@ -10,6 +10,7 @@
 #import "UIViewController+XHPhoto.h"
 #import "objc/runtime.h"
 #import <AssetsLibrary/ALAssetsLibrary.h>
+#import "XHImagePickerController.h"
 
 #ifdef DEBUG
 #define debugLog(...)    NSLog(__VA_ARGS__)
@@ -70,10 +71,11 @@ static  char tempBlockKey;
     if(![self authorWithType:1]) return;
     
     //相册
-    UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+    XHImagePickerController* imagePickerController = [[XHImagePickerController alloc] init];
     imagePickerController.delegate = self;
     imagePickerController.allowsEditing = canEdit;
-    imagePickerController.sourceType =UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.modalPresentationStyle = UIModalPresentationOverFullScreen;
  
     [self presentViewController:imagePickerController animated:YES completion:NULL];
 }
@@ -86,13 +88,14 @@ static  char tempBlockKey;
     if(![self authorWithType:0]) return;
     
     //相机
-    UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+    XHImagePickerController* imagePickerController = [[XHImagePickerController alloc] init];
     imagePickerController.delegate = self;
     imagePickerController.allowsEditing = canEdit;
     //是否支持相机
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    if([XHImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
         imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        imagePickerController.modalPresentationStyle = UIModalPresentationOverFullScreen;
         [self presentViewController:imagePickerController animated:YES completion:NULL];
     }
     else
